@@ -20,18 +20,20 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines)
 - Remote Desktop
-- Active Directory Domain Services
-- PowerShell
+- Various Command-Line Tools
+- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Wireshark (Protocol Analyzer)
 <h2>Operating Systems Used </h2>
 
-- Windows Server 2022
-- Windows 10 (21H2)</b>
-
-<h2>Deployment and Configuration Steps</h2>
+- Windows 10 (21H2)
+- Ubuntu Server 20.04</b>
 </p>
 <p>
-In this lab we will create two VMs in the same VNET. One will be a Domain Controller, the other will be a Client machine. We will change the DC to a static IP because its offering Active Directory services to the client machine. Client machine will be joined to the domain. We will control the DNS settings on the client machine, the client machine will use the DC as its DNS server.
+<h2>Actions and Observations</h2>
+</p>
+<p>
+Welcome to my tutorial on Network Security Groups and Inspecting Network Protocols. First you will need to create two VMs on Azure. One machine will be a Linux machine and the other will be a Windows 10 machine. Both will have two cpus and they must be on the same VNET. Once that is done go on the Windows machine and download Wireshark. I will attatch a link to the wireshark download. https://www.wireshark.org/download.html Once installed open Wireshark and filter for ICMP Traffic only. ICMP is a network layer protocol that relays messages concerning network connection issues. Ping uses this protocol, ping tests connectivity between hosts. When we filter wirehsark to only capture ICMP packets and ping the private IP address of our linux machine we can visually see the packets on wireshark.
 </p>
 <p>
