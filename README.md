@@ -108,3 +108,34 @@ I then navigated to the Ubuntu VM’s Network Security Group in the Azure portal
 <img width="2874" height="1712" alt="slide11" src="https://github.com/user-attachments/assets/c601d62c-8c8e-43fe-a6e8-205f44e31bf6" />
 </p>
 <p>
+After that, I removed the ICMP block rule in the NSG, and the ping started responding again, which was visible both on the command line and in Wireshark.
+</p>
+<p>
+<img width="2880" height="1560" alt="slide12" src="https://github.com/user-attachments/assets/529615f3-31d7-4443-99be-cddffe7c9d45" />
+</p>
+<p>
+Observe SSH Traffic. In Wireshark, I changed the filter to display SSH traffic only. From the Windows VM, I SSH'd into the Ubuntu machine using its private IP. As I typed commands like ls and pwd, I saw SSH packet activity appear in Wireshark. I ended the SSH session by typing exit, closing the secure shell connection.
+</p>
+<p>
+<img width="2868" height="1712" alt="slide13" src="https://github.com/user-attachments/assets/1ecb78ed-8332-48f1-ba05-424ef09db5fd" />
+</p>
+<p>
+Analyze DHCP Traffic. I updated the Wireshark filter to capture DHCP traffic. On the Windows VM, I opened the command prompt and typed ipconfig /renew to request a new IP address from the DHCP server. In Wireshark, I observed the DHCP request and response process, showing the renewal of the machine’s IP address.
+</p>
+<p>
+<img width="2880" height="1712" alt="slide14" src="https://github.com/user-attachments/assets/a8264b84-d662-4cf8-968a-22f2f40c26ba" />
+</p>
+<p>
+Inspect DNS Traffic. With Wireshark now set to display DNS packets, I used the nslookup command in the Windows command line to query the IP addresses of google.com and disney.com. Each query generated visible DNS traffic in Wireshark, showing resolution requests and the resulting IP addresses.
+</p>
+<p>
+<img width="2880" height="1714" alt="slide15" src="https://github.com/user-attachments/assets/fe8bab10-9e9f-42f3-9eac-fd536888c553" />
+</p>
+<p>
+Review RDP Traffic. Lastly, I filtered Wireshark to show RDP traffic only using the expression tcp.port==3389. I noticed a constant stream of RDP packets, which is expected because Remote Desktop Protocol continuously sends data to maintain a live visual connection between the host and client.
+</p>
+<p>
+<img width="2880" height="1720" alt="slide16" src="https://github.com/user-attachments/assets/7cbf89c4-94c1-4024-b204-b891e9cb6734" />
+</p>
+<p>
+Clean up Azure Environment Once all observations were complete, I closed the Remote Desktop session, returned to the Azure portal, and deleted the Resource Group to ensure no lingering resources would incur extra charges.
