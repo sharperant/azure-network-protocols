@@ -75,5 +75,36 @@ Observe Your Virtual Network within Network Watcher:
 Monitor ICMP Traffic with Wireshark. I connected to the Windows VM via Remote Desktop, installed Wireshark, and applied a filter to display ICMP traffic only.
 </p>
 <p>
-[slide5](https://github.com/user-attachments/assets/5e874622-0e1a-436b-9482-fc1f843c5404)
-
+<img width="852" height="500" alt="slide5" src="https://github.com/user-attachments/assets/6b45326f-dc7e-46b5-8487-305e0d59f496" />
+</p>
+<p>
+From the Windows machine, I located the private IP address of the Ubuntu VM and sent ping requests to it. I was able to observe both requests and replies in Wireshark, confirming successful communication over the private network.
+</p>
+<p>
+<img width="2880" height="1560" alt="slide6" src="https://github.com/user-attachments/assets/afcc85bf-c0bc-4741-b245-9a9b497dcd94" />
+</p>
+<p>
+<img width="2878" height="1718" alt="slide7" src="https://github.com/user-attachments/assets/2ab4a380-1fa2-41e6-84ca-d54cb6c5b4f6" />
+</p>
+<p>
+I also pinged a public site like www.google.com, and Wireshark displayed ICMP packets showing traffic going out to the internet and returning responses.
+</p>
+<p>
+<img width="2880" height="1718" alt="slide8" src="https://github.com/user-attachments/assets/3380b4a4-b665-4e9a-814d-ecb8c071c7c3" />
+</p>
+<p>
+To simulate continuous monitoring, I initiated a perpetual ping to the Ubuntu VM from the Windows command line and watched the constant flow of ICMP packets in Wireshark.
+</p>
+<p>
+<img width="2880" height="1720" alt="slide9" src="https://github.com/user-attachments/assets/6acdcf99-f269-4bdd-addb-72d1c5da4d90" />
+</p>
+<p>
+I then navigated to the Ubuntu VM’s Network Security Group in the Azure portal and disabled inbound ICMP traffic by adding a new rule. Back on the Windows VM, I observed that ping replies stopped appearing, and Wireshark confirmed the lack of incoming traffic.
+</p>
+<p>
+<img width="2880" height="1562" alt="slide10" src="https://github.com/user-attachments/assets/29a16f86-b9c9-4552-8549-fe126b5860b1" />
+</p>
+<p>
+<img width="2874" height="1712" alt="slide11" src="https://github.com/user-attachments/assets/c601d62c-8c8e-43fe-a6e8-205f44e31bf6" />
+</p>
+<p>
