@@ -51,3 +51,6 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 Set up the virtual environment. First, I created a Resource Group in my Azure subscription to organize all related resources.
 </p>
 <p>
+<img width="1037" height="562" alt="slide1" src="https://github.com/user-attachments/assets/eb12ece2-5c98-4479-8dad-37e71c62e8ba" />
+
+
