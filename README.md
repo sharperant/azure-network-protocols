@@ -29,12 +29,19 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 <p>
 <h2>High-Level Steps</h2>
-- Create a Resource Group
-- Create a Virtual Machine
+
+  - Create a Resource Group
+
+  - Create a Virtual Machine
+
 - Observe ICMP Traffic
+
 - Observe SSH Traffic
+
 - Observe DHCP Traffic
+
 - Observe DNS Traffic
+
 - Observe RDP Traffic 
 </p>
 <p>
