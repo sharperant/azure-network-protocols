@@ -75,3 +75,5 @@ Observe Your Virtual Network within Network Watcher:
 Monitor ICMP Traffic with Wireshark. I connected to the Windows VM via Remote Desktop, installed Wireshark, and applied a filter to display ICMP traffic only.
 </p>
 <p>
+[slide5](https://github.com/user-attachments/assets/5e874622-0e1a-436b-9482-fc1f843c5404)
+
