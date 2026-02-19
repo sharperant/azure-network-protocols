@@ -9,13 +9,6 @@
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups.
 </p>
 <p>
-</p>
-<p>
-</p>
-<p>
-<h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
-</p>
 <p>
 
 <h2>Environments and Technologies Used</h2>
@@ -29,6 +22,16 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 - Windows 10 (21H2)
 - Ubuntu Server 20.04</b>
+</p>
+<p>
+<h2>High-Level Steps</h2>
+- Create a Resource Group
+- Create a Virtual Machine
+- Observe ICMP Traffic
+- Observe SSH Traffic
+- Observe DHCP Traffic
+- Observe DNS Traffic
+- Observe RDP Traffic 
 </p>
 <p>
 <h2>Actions and Observations</h2>
